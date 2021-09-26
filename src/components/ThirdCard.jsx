@@ -1,52 +1,50 @@
-import React, { Fragment, useContext, useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react';
 import { DataContext } from '../context/DataContext';
+// styles css
 import '../styles/card.css'
 
-
-function SecondCard() {
-  const { countries, page, setPage, count, setCount, open, setOpen } = useContext(DataContext);
+function ThirdCArd() {
+  const { countries, page, setPage, count, setCount} = useContext(DataContext);
   const [correct, setCorrect] = useState(true);
+  const [open, setOpen] = useState(false);
   const nextPage = () => {
-    setPage(3)
+    setPage(4)
     console.log(count);
-    console.log(countries[0]);
   }
-//   console.log(countries ? countries[1].flags[1] : "nda");
   return (
-      <Fragment>
-      {page === 2 ? (
+    <Fragment>
+      {page === 3 ? (
         <div className="card">
           <div className="header">
-              <img src={countries[2].flags[1]} alt="" width="75px"/>
-            <p> is flag of:</p>
+            <p>Wich is the capital of: {countries[3].name}:</p>
           </div>
 
           <div className="body">
-            {page === 2 && countries
+            {page === 3 && countries
               ? countries.map((item, index) => (
                   <div
                     className={
-                        item.flags[1] === countries[2].flags[1] && !open
+                        open && correct && item.capital === countries[3].capital 
                         ? "options-true"
                         : "options"
                     }
                     
                     key={index}
                     onClick={() =>
-                      item.flags[1] === countries[2].flags[1] && correct && count!==(3)
-                        ? setCount(count + 1) & setOpen(false)
+                      item.capital === countries[3].capital && correct && count!==(4)
+                        ? setCount(count + 1) & setOpen(true)
                         : setCorrect(false)
                     }
                   >
                     <p
                       className={
-                        !correct && item.flags[1] !== countries[2].flags[1] 
+                        !correct && item.capital !== countries[3].capital
                           ? "rojo"
                           : ""
                       }
                     // className={item.capital !== countries[0].capital && !correct? "rojo": "verde"}
                     >
-                      {item.name}
+                      {item.capital}
                     </p>
                   </div>
                 ))
@@ -54,8 +52,8 @@ function SecondCard() {
           </div>
 
           <div className="footer">
-            {countries  ? (
-              <p onClick={nextPage}>next page </p>
+            {countries ? (
+              <p onClick={nextPage}>next page 1</p>
             ) : null}
           </div>
         </div>
@@ -64,4 +62,4 @@ function SecondCard() {
   );
 }
 
-export default SecondCard;
+export default ThirdCArd;

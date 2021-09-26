@@ -1,0 +1,26 @@
+.last-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 415px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.last-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: crimson;
+    height: 250px;
+    width: 100%;
+    
+}
+.last-card .card-body p{
+    font-size: 30px;
+    color: #fff;
+}

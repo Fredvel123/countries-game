@@ -7,6 +7,8 @@ function DataProvider({ children }) {
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
   const [count, setCount] = useState(0);
+  const [open, setOpen] = useState(false);
+  
   
   // code to get random items from the api.
   let items = info;
@@ -24,7 +26,8 @@ function DataProvider({ children }) {
         page,
         setPage,
         count, 
-        setCount
+        setCount,
+        open, setOpen
       }}
     >
       {children}

@@ -4,7 +4,7 @@ import { DataContext } from '../context/DataContext';
 import '../styles/card.css'
 
 function Page1() {
-  const { countries, page, setPage, count, setCount} = useContext(DataContext);
+  const { countries, page, setPage, count, setCount, open, setOpen} = useContext(DataContext);
   const [correct, setCorrect] = useState(true);
   const nextPage = () => {
     setPage(2)
@@ -31,8 +31,8 @@ function Page1() {
                     key={index}
                     onClick={() =>
                       item.capital === countries[0].capital && correct && count === 0
-                        ? setCount(count + 1)
-                        : setCorrect(false)
+                        ? setCount(count + 1) & setOpen(true)
+                        : setCorrect(false) & setOpen(true)
                     }
                   >
                     <p

@@ -20,6 +20,9 @@
     padding-left: 25px;
     font-size: 25px;
 }
+.card .header img {
+    padding-left: 25px;
+}
 /* code to the body */
 .card .body {
     display: flex;
@@ -89,4 +92,7 @@
 
 .footer p:hover {
     background: crimson;
+}
+.rojo {
+    color: crimson;
 }

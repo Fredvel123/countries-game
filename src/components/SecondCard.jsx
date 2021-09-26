@@ -1,20 +1,64 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { DataContext } from '../context/DataContext';
+import '../styles/card.css'
+
 
 function SecondCard() {
-  const { countries, page, setPage } = useContext(DataContext);
+  const { countries, page, setPage, count, setCount} = useContext(DataContext);
+  const [correct, setCorrect] = useState(true);
+  const nextPage = () => {
+    setPage(2)
+    console.log(count);
+  }
+//   console.log(countries ? countries[1].flags[1] : "nda");
   return (
-    <Fragment>
-      <div>
-        {
-          page === 2 && countries ? countries.map(item => <h4>{item.capital}</h4>) : null
-        }
-      </div>
-      <div>
-        {
-          page === 2  ? <button>next page 2</button> : null
-        }
-      </div>
+      <Fragment>
+      {page === 2 ? (
+        <div className="card">
+          <div className="header">
+              <img src={countries[1].flags[1]} alt="" width="75px"/>
+            <p> is flag of:</p>
+          </div>
+
+          <div className="body">
+            {page === 2 && countries
+              ? countries.map((item, index) => (
+                  <div
+                    className={
+                      count !== 0 && correct && item.flags[1] === countries[1].flags[1]
+                        ? "options-true"
+                        : "options"
+                    }
+                    
+                    key={index}
+                    onClick={() =>
+                      item.flags[1] === countries[1].flags[1] && correct
+                        ? setCount(count + 1)
+                        : setCorrect(false)
+                    }
+                  >
+                    <p
+                      className={
+                        !correct && item.capital !== countries[0].capital
+                          ? "rojo"
+                          : ""
+                      }
+                    // className={item.capital !== countries[0].capital && !correct? "rojo": "verde"}
+                    >
+                      {item.name}
+                    </p>
+                  </div>
+                ))
+              : null}
+          </div>
+
+          <div className="footer">
+            {count !== 2 || !correct ? (
+              <p onClick={nextPage}>next page </p>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
     </Fragment>
   );
 }

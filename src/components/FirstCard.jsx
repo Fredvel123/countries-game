@@ -23,14 +23,16 @@ function Page1() {
               ? countries.map((item, index) => (
                   <div className={count !== 0 && item.capital === countries[0].capital
                     ? "options-true"
-                    : "options"} key={index}>
+                    : "options"} key={index}
+                    onClick={() =>
+                      item.capital === countries[0].capital && correct
+                        ? setCount(count + 1)
+                        : setCorrect(false)
+                    }
+                    >
                       
                       <p
-                        onClick={() =>
-                          item.capital === countries[0].capital && correct
-                            ? setCount(count + 1)
-                            : setCorrect(false)
-                        }
+                        
                         // className={item.capital !== countries[0].capital && !correct? "rojo": "verde"}
                       >
                         {item.name}

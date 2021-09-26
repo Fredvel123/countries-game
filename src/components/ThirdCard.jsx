@@ -16,7 +16,7 @@ function ThirdCArd() {
       {page === 3 ? (
         <div className="card">
           <div className="header">
-            <p>Wich is the capital of: {countries[3].name}:</p>
+            <p>Wich is the capital of {countries[3].name}:</p>
           </div>
 
           <div className="body">
@@ -31,7 +31,7 @@ function ThirdCArd() {
                     
                     key={index}
                     onClick={() =>
-                      item.capital === countries[3].capital && correct && count!==(4)
+                      item.capital === countries[3].capital && correct && count!==(3)
                         ? setCount(count + 1) & setOpen(true)
                         : setCorrect(false)
                     }
@@ -53,7 +53,7 @@ function ThirdCArd() {
 
           <div className="footer">
             {countries ? (
-              <p onClick={nextPage}>next page 1</p>
+              <p onClick={nextPage}>next page</p>
             ) : null}
           </div>
         </div>

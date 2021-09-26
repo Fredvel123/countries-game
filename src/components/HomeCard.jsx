@@ -17,7 +17,7 @@ function HomeCard() {
       {page === 0 ? (
         <div className="home-card">
           <div>
-            {page === 0 ? <h1>Do you want to play: "Country Quiz"? </h1> : null}
+            {page === 0 ? <h1>Do you want to play Country Quiz? </h1> : null}
           </div>
           <div className="button">
             {page === 0 ? <p onClick={start}>Start</p> : null}

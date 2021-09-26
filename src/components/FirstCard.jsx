@@ -52,7 +52,7 @@ function Page1() {
 
           <div className="footer">
             {count !== 0 || !correct ? (
-              <p onClick={nextPage}>next page 1</p>
+              <p onClick={nextPage}>next page </p>
             ) : null}
           </div>
         </div>

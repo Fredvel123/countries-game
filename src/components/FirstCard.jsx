@@ -30,7 +30,7 @@ function Page1() {
                     
                     key={index}
                     onClick={() =>
-                      item.capital === countries[0].capital && correct
+                      item.capital === countries[0].capital && correct && count === 0
                         ? setCount(count + 1)
                         : setCorrect(false)
                     }

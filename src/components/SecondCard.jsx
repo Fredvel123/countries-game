@@ -16,7 +16,7 @@ function SecondCard() {
       {page === 2 ? (
         <div className="card">
           <div className="header">
-              <img src={countries[1].flags[1]} alt="" width="75px"/>
+              <img src={countries[2].flags[1]} alt="" width="75px"/>
             <p> is flag of:</p>
           </div>
 
@@ -25,21 +25,21 @@ function SecondCard() {
               ? countries.map((item, index) => (
                   <div
                     className={
-                      count !== 0 && correct && item.flags[1] === countries[1].flags[1]
-                        ? "options-true"
+                      count !== 0 && correct && item.flags[1] === countries[2].flags[1]
+                        ? "options"
                         : "options"
                     }
                     
                     key={index}
                     onClick={() =>
-                      item.flags[1] === countries[1].flags[1] && correct
+                      item.flags[1] === countries[2].flags[1] && correct && count===(0,1)
                         ? setCount(count + 1)
                         : setCorrect(false)
                     }
                   >
                     <p
                       className={
-                        !correct && item.capital !== countries[0].capital
+                        !correct && item.flags[1] !== countries[2].flags[1]
                           ? "rojo"
                           : ""
                       }
@@ -53,7 +53,7 @@ function SecondCard() {
           </div>
 
           <div className="footer">
-            {count !== 2 || !correct ? (
+            {count !== 1 || !correct || count!==0 ? (
               <p onClick={nextPage}>next page </p>
             ) : null}
           </div>

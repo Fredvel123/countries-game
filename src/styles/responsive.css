@@ -1,0 +1,20 @@
+@media screen and (max-width: 430px) {
+    .last-card {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 300px !important;
+        height: 415px;
+    }
+    .card {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 415px;
+    }
+    .last-card .card-body p{
+        font-size: 25px !important;
+        color: rgb(75, 75, 75);
+    }
+}

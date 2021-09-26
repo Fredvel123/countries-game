@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 // styles css
 import '../styles/home.css'
+import '../styles/responsive.css'
 
 
 function HomeCard() {

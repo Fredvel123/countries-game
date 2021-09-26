@@ -1,19 +1,18 @@
-import React, { Fragment, useContext, useState } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { DataContext } from '../context/DataContext';
 
 function SecondCard() {
-  const { countries, count, setCount, next, setNext } = useContext(DataContext);
-  const [open, setOpen] = useState(true);
+  const { countries, page, setPage } = useContext(DataContext);
   return (
     <Fragment>
       <div>
         {
-          countries && open && !next ? countries.map(item => <h4>{item.capital}</h4>) : null
+          page === 2 && countries ? countries.map(item => <h4>{item.capital}</h4>) : null
         }
       </div>
       <div>
         {
-          !next && open  ? <button>next page 2</button> : null
+          page === 2  ? <button>next page 2</button> : null
         }
       </div>
     </Fragment>

@@ -5,8 +5,8 @@ export const DataContext = createContext();
 function DataProvider({ children }) {
   const { info } = useFetch('https://restcountries.com/v2/all');
   const [countries, setCountries] = useState([]);
-  const [count, setCount] = useState(0);
-  const [next, setNext] = useState(false);
+  const [page, setPage] = useState(0);
+  
   // code to get random items from the api.
   let items = info;
   let randomCountries = [];
@@ -20,10 +20,8 @@ function DataProvider({ children }) {
         countries,
         setCountries,
         randomCountries,
-        count,
-        setCount,
-        next,
-        setNext,
+        page,
+        setPage
       }}
     >
       {children}

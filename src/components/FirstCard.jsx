@@ -4,7 +4,7 @@ import { DataContext } from '../context/DataContext';
 import '../styles/card.css'
 
 function Page1() {
-  const { countries, page, setPage, count, setCount, open, setOpen} = useContext(DataContext);
+  const { countries, page, setPage, count, setCount, setOpen} = useContext(DataContext);
   const [correct, setCorrect] = useState(true);
   const nextPage = () => {
     setPage(2)

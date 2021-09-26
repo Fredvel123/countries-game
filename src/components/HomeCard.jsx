@@ -1,5 +1,7 @@
 import React, { Fragment, useContext } from 'react';
 import { DataContext } from '../context/DataContext';
+// styles css
+import '../styles/home.css'
 
 
 function HomeCard() {
@@ -11,14 +13,16 @@ function HomeCard() {
   }
   return (
     <Fragment>
-      <h1>this is the first card.</h1>
-      <div>
-        {
-          page === 0? 
-          <button onClick={start}>Click me</button>
-          : null
-        }
-      </div>
+      {page === 0 ? (
+        <div className="home-card">
+          <div>
+            {page === 0 ? <h1>Do you want to play: "Country Quiz"? </h1> : null}
+          </div>
+          <div className="button">
+            {page === 0 ? <p onClick={start}>Start</p> : null}
+          </div>
+        </div>
+      ) : null}
     </Fragment>
   );
 }

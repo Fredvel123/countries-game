@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* CODE TO HOME COMPONETN */
+body {
+    background: linear-gradient(rgb(55, 122, 160), rgb(49, 131, 179));
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.home-card {
+    border-radius: 7px;
+    background: rgb(218, 218, 218);
+    padding: 25px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home-card .button{
+    padding-top: 55px;
+}
+.home-card .button p{
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+    background: rgb(20, 68, 197);
+    color: white;
+    transition: .2s;
+}
+.home-card .button p:hover {
+    background: crimson;
+
+}

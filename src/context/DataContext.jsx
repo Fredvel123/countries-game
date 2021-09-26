@@ -6,6 +6,7 @@ function DataProvider({ children }) {
   const { info } = useFetch('https://restcountries.com/v2/all');
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
+  const [count, setCount] = useState(0);
   
   // code to get random items from the api.
   let items = info;
@@ -21,7 +22,9 @@ function DataProvider({ children }) {
         setCountries,
         randomCountries,
         page,
-        setPage
+        setPage,
+        count, 
+        setCount
       }}
     >
       {children}

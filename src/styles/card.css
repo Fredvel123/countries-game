@@ -1,0 +1,89 @@
+.card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 415px;
+    border-radius: 15px;
+}
+.card .header{
+    width: 100%;
+    height: 20%;
+    color: rgb(77, 77, 77);
+    display: flex;
+    align-items: flex-end;
+}
+.card .header p {
+    padding-left: 25px;
+    font-size: 25px;
+}
+/* code to the body */
+.card .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65%;
+}
+.card .body .options {
+    margin: 7px 25px;
+    height: 35px;
+    border-radius: 8px;
+    /* padding: 15px 25px; */
+    color: rgb(78, 78, 78);
+    border: 2px solid rgb(134, 134, 134);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.card .body .options:hover {
+    background: rgb(255, 146, 44);
+    color: cornsilk;
+    border: 2px solid rgb(255, 146, 44);
+}
+
+.card .body .options p {
+    margin-left: 25px;
+}
+
+.card .body .options-true p {
+    margin-left: 25px;
+}
+
+.card .body .options-true {
+    margin: 7px 25px;
+    background: rgb(42, 165, 58);
+    height: 35px;
+    border-radius: 8px;
+    /* padding: 15px 25px; */
+    color: rgb(78, 78, 78);
+    border: 2px solid rgb(134, 134, 134);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s; 
+    color: #fff;
+}
+/* code to the footer - button next */
+.footer {
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+.footer p {
+    background: rgb(29, 114, 211);
+    margin: 10px 20px;
+    height: 75%;
+    width: 100px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.footer p:hover {
+    background: crimson;
+}

@@ -17,10 +17,17 @@
     align-items: center;
     background: crimson;
     height: 250px;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     
 }
 .last-card .card-body p{
     font-size: 30px;
     color: #fff;
+}
+.last-card .card-body h3{
+    color:#fff;
+    padding-bottom: 35px;
+    font-size: 50px;
 }

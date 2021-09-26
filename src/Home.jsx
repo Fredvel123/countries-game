@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import FirstCard from './components/FirstCard';
 // IMPOTING CARDS FROM HERE
 import HomeCard from './components/HomeCard';
+import SecondCard from './components/SecondCard';
 import DataProvider from './context/DataContext';
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <DataProvider>
         <HomeCard />
         <FirstCard />
+        <SecondCard />
       </DataProvider>
     </Fragment>
   );
